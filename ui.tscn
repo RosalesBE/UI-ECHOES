@@ -1,0 +1,78 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjg8ppq5bf2ij"]
+
+[ext_resource type="Texture2D" uid="uid://b6tul4bm7g0yw" path="res://DALL·E 2025-02-25 12.18.39 - A pixel art main menu background for a 2D RPG game titled 'Echoes'. The scene features a mysterious, abandoned clock tower at twilight, with gears and.webp" id="1_3f6sa"]
+[ext_resource type="FontFile" uid="uid://bwfo6u0a8u4kf" path="res://Font/Kenney Future.ttf" id="2_15x3c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cdher"]
+bg_color = Color(0.311893, 0.651108, 0.761169, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1hj2x"]
+bg_color = Color(0.282079, 0.674527, 0.636699, 1)
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.576471, 1, 1, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_3f6sa")
+expand_mode = 2
+stretch_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -158.0
+offset_top = -206.0
+offset_right = 158.0
+offset_bottom = 219.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 27
+alignment = 1
+
+[node name="Jugar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_15x3c")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_cdher")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1hj2x")
+text = "Jugar"
+
+[node name="Opciones" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_15x3c")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_cdher")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1hj2x")
+text = "Opciones"
+
+[node name="Salir" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_15x3c")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_cdher")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1hj2x")
+text = "Salir"
